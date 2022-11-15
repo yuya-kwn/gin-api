@@ -1,9 +1,9 @@
 version: '3'
 services:
   api:
-  build: ./docker/go/Dockerfile
-  tty: true
-  volumes:
-    - ./src/api : /go/src/api
-  ports:
-    - 3000:3000
+    build: ./src/api
+    tty: true
+    volumes: 
+      - ./src/api:/go/src/api
+    ports:
+      - "3000:3000"

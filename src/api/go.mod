@@ -1,4 +1,4 @@
-module github.com/yuya-kwn/gin-api
+module api
 
 go 1.19
 
