@@ -1,5 +1,6 @@
 version: '3'
 services:
+  
   api:
     build: ./src/api
     tty: true
@@ -7,3 +8,10 @@ services:
       - ./src/api:/go/src/api
     ports:
       - "3000:3000"
+
+  mysql:
+    build: ./mysql
+    volumes:
+      - mysql/db:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
