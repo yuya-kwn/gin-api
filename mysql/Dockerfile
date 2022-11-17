@@ -1,6 +1,6 @@
 FROM mysql:latest
 
-WORKDIR /var/lib/mysql
+WORKDIR /var/www/mysql
 
 EXPOSE 3306
 
