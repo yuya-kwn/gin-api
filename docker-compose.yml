@@ -2,6 +2,7 @@ version: '3'
 services:
   
   api:
+    container_name: api
     build: ./src/api
     tty: true
     volumes: 
@@ -12,6 +13,7 @@ services:
       - mysql
 
   mysql:
+    container_name: mysql
     build: ./mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
